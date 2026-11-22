@@ -298,7 +298,7 @@ public class Board {
     }
 
     public int[] getBestMoveAndScore(boolean amIRed, int recursionDepth) {//Format: x, y, score
-        System.out.println("Recursion depth: " + recursionDepth);
+        //System.out.println("Recursion depth: " + recursionDepth);
         long[] myMoves = getMoves(amIRed);
         long[] opponentMoves = getMoves(!amIRed);
 

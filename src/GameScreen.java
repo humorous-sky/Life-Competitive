@@ -149,7 +149,7 @@ public class GameScreen extends JPanel implements MouseMotionListener, MouseList
 
                         if (bot && botThread == null) {
                             botThread = new Thread(() -> {
-                                int[] botMove = board.getBestMoveAndScore(false, 3);
+                                int[] botMove = board.getBestMoveAndScore(false, 2);
                                 if (state == 2 || state == 3) {
                                     selX = botMove[0];
                                     selY = botMove[1];
@@ -167,7 +167,7 @@ public class GameScreen extends JPanel implements MouseMotionListener, MouseList
                     break;
                 case 1: case 3: 
                     timer.setColor(state == 1 ? Color.RED : Color.BLUE);
-                    nextStateChange = Life.frameTime + 25000;
+                    nextStateChange = Life.frameTime + 10000;
                     break;
                 case 4:
                     Xs[1] = selX;
